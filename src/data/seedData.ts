@@ -1,0 +1,190 @@
+import { EventItem, Ticket, User } from '../types';
+
+export const SEED_USERS: User[] = [
+  {
+    id: 'user-admin-1',
+    name: 'Alex Rivera',
+    email: 'alex@eventapp.io',
+    phone: '+1 (555) 019-2831',
+    role: 'admin',
+    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+    password: 'password'
+  },
+  {
+    id: 'user-demo-1',
+    name: 'Sarah Jenkins',
+    email: 'sarah.j@company.com',
+    phone: '+1 (555) 382-9102',
+    role: 'user',
+    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80',
+    password: 'password'
+  },
+  {
+    id: 'user-demo-2',
+    name: 'David Chen',
+    email: 'david.chen@dev.io',
+    phone: '+1 (555) 910-3491',
+    role: 'user',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+    password: 'password'
+  }
+];
+
+export const SEED_EVENTS: EventItem[] = [
+  {
+    id: 'evt-1',
+    title: 'AI Horizon & NextGen Models Summit 2026',
+    description: 'Join industry pioneers, deep learning researchers, and cloud architects for a 2-day deep dive into autonomous agents, multi-modal reasoning, and scalable infrastructure.',
+    category: 'Conference',
+    date: '2026-08-15',
+    time: '09:00 AM - 06:00 PM',
+    location: 'Moscone Center, San Francisco',
+    price: 149,
+    capacity: 500,
+    registeredCount: 412,
+    imageUrl: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop&q=80',
+    gradient: 'from-violet-600 via-indigo-600 to-purple-800',
+    featured: true,
+    speakerName: 'Dr. Elena Rostova',
+    speakerRole: 'VP of AI Research'
+  },
+  {
+    id: 'evt-2',
+    title: 'Modern SaaS UI/UX Design Masterclass',
+    description: 'Learn the exact design engineering secrets behind Stripe, Vercel, and Linear. Master dark mode color theory, glassmorphism aesthetics, and micro-interactions.',
+    category: 'Workshop',
+    date: '2026-09-04',
+    time: '01:00 PM - 05:00 PM',
+    location: 'Design Loft, SoHo, New York',
+    price: 89,
+    capacity: 80,
+    registeredCount: 76,
+    imageUrl: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&auto=format&fit=crop&q=80',
+    gradient: 'from-pink-500 via-rose-600 to-amber-600',
+    featured: true,
+    speakerName: 'Marcus Vance',
+    speakerRole: 'Principal Product Designer'
+  },
+  {
+    id: 'evt-3',
+    title: 'Cloud Native DevOps & Kubernetes Con',
+    description: 'Explore zero-downtime deployments, serverless containers, eBPF observability, and automated CI/CD pipelines at enterprise scale.',
+    category: 'Conference',
+    date: '2026-10-12',
+    time: '10:00 AM - 04:30 PM',
+    location: 'Austin Convention Center, Texas',
+    price: 120,
+    capacity: 350,
+    registeredCount: 290,
+    imageUrl: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&auto=format&fit=crop&q=80',
+    gradient: 'from-cyan-500 via-blue-600 to-indigo-700',
+    featured: false,
+    speakerName: 'Kavita Patel',
+    speakerRole: 'Cloud Infrastructure Lead'
+  },
+  {
+    id: 'evt-4',
+    title: 'React 19 & Server Components Deep Dive',
+    description: 'Hands-on live coding webinar dissecting Actions, useActionState, optimistic updates, and compiler optimizations for lightning-fast web apps.',
+    category: 'Webinar',
+    date: '2026-07-28',
+    time: '11:00 AM - 01:00 PM EST',
+    location: 'Online Live Stream (Zoom / Twitch)',
+    price: 0,
+    capacity: 1000,
+    registeredCount: 845,
+    imageUrl: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&auto=format&fit=crop&q=80',
+    gradient: 'from-blue-500 via-teal-500 to-emerald-600',
+    featured: false,
+    speakerName: 'Dan Abramovitz',
+    speakerRole: 'Frontend Framework Engineer'
+  },
+  {
+    id: 'evt-5',
+    title: 'Indie Hacker & Founders Rooftop Meetup',
+    description: 'Networking night for solo founders, bootstrapped creators, and early-stage angel investors. Drinks, lightning pitches, and candid discussions.',
+    category: 'Meetup',
+    date: '2026-08-22',
+    time: '06:30 PM - 09:30 PM',
+    location: 'Skyline Terrace, Seattle, WA',
+    price: 25,
+    capacity: 120,
+    registeredCount: 115,
+    imageUrl: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&auto=format&fit=crop&q=80',
+    gradient: 'from-amber-500 via-orange-600 to-red-600',
+    featured: false,
+    speakerName: 'Liam O’Connor',
+    speakerRole: 'Serial Bootstrapper & Investor'
+  }
+];
+
+export const SEED_TICKETS: Ticket[] = [
+  {
+    id: 'EVT-2026-9482',
+    eventId: 'evt-1',
+    eventTitle: 'AI Horizon & NextGen Models Summit 2026',
+    eventDate: '2026-08-15',
+    eventTime: '09:00 AM - 06:00 PM',
+    eventLocation: 'Moscone Center, San Francisco',
+    userId: 'user-demo-1',
+    attendeeName: 'Sarah Jenkins',
+    attendeeEmail: 'sarah.j@company.com',
+    attendeePhone: '+1 (555) 382-9102',
+    ticketType: 'VIP',
+    pricePaid: 149,
+    registeredAt: '2026-06-20T14:32:00Z',
+    qrData: 'EVT-2026-9482|evt-1|user-demo-1',
+    status: 'valid'
+  },
+  {
+    id: 'EVT-2026-3819',
+    eventId: 'evt-2',
+    eventTitle: 'Modern SaaS UI/UX Design Masterclass',
+    eventDate: '2026-09-04',
+    eventTime: '01:00 PM - 05:00 PM',
+    eventLocation: 'Design Loft, SoHo, New York',
+    userId: 'user-demo-1',
+    attendeeName: 'Sarah Jenkins',
+    attendeeEmail: 'sarah.j@company.com',
+    attendeePhone: '+1 (555) 382-9102',
+    ticketType: 'Standard',
+    pricePaid: 89,
+    registeredAt: '2026-06-21T09:15:00Z',
+    qrData: 'EVT-2026-3819|evt-2|user-demo-1',
+    status: 'valid'
+  },
+  {
+    id: 'EVT-2026-7712',
+    eventId: 'evt-1',
+    eventTitle: 'AI Horizon & NextGen Models Summit 2026',
+    eventDate: '2026-08-15',
+    eventTime: '09:00 AM - 06:00 PM',
+    eventLocation: 'Moscone Center, San Francisco',
+    userId: 'user-demo-2',
+    attendeeName: 'David Chen',
+    attendeeEmail: 'david.chen@dev.io',
+    attendeePhone: '+1 (555) 910-3491',
+    ticketType: 'Standard',
+    pricePaid: 149,
+    registeredAt: '2026-06-18T11:20:00Z',
+    qrData: 'EVT-2026-7712|evt-1|user-demo-2',
+    status: 'checked-in'
+  },
+  {
+    id: 'EVT-2026-1194',
+    eventId: 'evt-4',
+    eventTitle: 'React 19 & Server Components Deep Dive',
+    eventDate: '2026-07-28',
+    eventTime: '11:00 AM - 01:00 PM EST',
+    eventLocation: 'Online Live Stream (Zoom / Twitch)',
+    userId: 'user-demo-2',
+    attendeeName: 'David Chen',
+    attendeeEmail: 'david.chen@dev.io',
+    attendeePhone: '+1 (555) 910-3491',
+    ticketType: 'Virtual Access',
+    pricePaid: 0,
+    registeredAt: '2026-06-22T16:05:00Z',
+    qrData: 'EVT-2026-1194|evt-4|user-demo-2',
+    status: 'valid'
+  }
+];

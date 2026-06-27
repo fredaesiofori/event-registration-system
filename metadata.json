@@ -1,0 +1,6 @@
+{
+  "name": "EventApp",
+  "description": "Modern full-stack event registration and ticketing system with admin management and QR verification",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
