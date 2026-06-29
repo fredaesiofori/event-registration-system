@@ -1,3 +1,9 @@
+# 🎟️ Event Registration System
+
+![Event Registration System](./events%20registraton.png)
+
+
+
 ## 🎟️ Event Registration System
 
 A serverless event and ticketing platform built as a final capstone project.
