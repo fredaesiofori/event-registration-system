@@ -34,6 +34,19 @@ Hosting: Vercel
 Build Tool: Vite
 Dev Tools: GitHub Actions, ESLint, TypeScript
 
+## 🐳 Docker Setup & Deployment
+
+# This project was containerized using Docker to ensure a consistent development and deployment environment.
+
+# 📌 What I did:
+Created a Dockerfile to containerize the application
+Built a Docker image for the project
+Created and configured a Docker container to run the app
+Managed container conflicts by removing or replacing existing containers
+Rebuilt the container after changes to the application
+Exposed the application through a mapped port for local access
+Tested the running container to confirm the application works correctly
+
 event-registration-system/
 │
 ├── .github/workflows     # CI/CD pipelines
