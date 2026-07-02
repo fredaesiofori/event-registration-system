@@ -35,6 +35,7 @@ Build Tool: Vite
 Dev Tools: GitHub Actions, ESLint, TypeScript
 
 # Monitoring Setup (Grafana + Prometheus)
+View Dashboard/Panel:http://localhost:3001/d/adxc8d6/new-dashboard?...=true&orgId=1&from=now-6h&to=now&timezone=browser
 
 This project includes monitoring using:
 - Prometheus for metrics collection
