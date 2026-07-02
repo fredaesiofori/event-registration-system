@@ -34,6 +34,18 @@ Hosting: Vercel
 Build Tool: Vite
 Dev Tools: GitHub Actions, ESLint, TypeScript
 
+# Monitoring Setup (Grafana + Prometheus)
+
+This project includes monitoring using:
+- Prometheus for metrics collection
+- Grafana for visualization dashboards
+- Docker for containerized setup
+
+### Features added:
+- CPU usage monitoring
+- Memory usage tracking
+- Container monitoring via cAdvisor
+
  # 🐳 Docker Setup & Deployment
 
 This project was containerized using Docker to ensure a consistent development and deployment environment.
