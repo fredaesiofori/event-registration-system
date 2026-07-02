@@ -1,0 +1,8 @@
+services:
+  eventapp:
+    build: .
+    image: event-registration-system:latest
+    container_name: eventapp-container
+    ports:
+      - "8080:80"
+    restart: unless-stopped
